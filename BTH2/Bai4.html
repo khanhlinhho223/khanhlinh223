@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính chỉ số BMI</title>
+    <style>
+        .input-group {
+            margin-bottom: 10px;
+        }
+    </style>
+    <div class="input-group">
+        <label for="input-weight">Nhập cân nặng?</label>
+        <input type="tel" id="input-weight" required>
+    </div>
+    <div class="input-group">
+        <label for="input-height">Nhập chiều cao?</label>
+        <input type="tel" id="input-height" required>
+    </div>
+    <div class="input-group">
+        <label for="input-customer-type">Chọn loại tuổi:</label>
+        <select id="input-customer-type" required>
+            <option value="">Chọn loại tuổi</option>
+            <option value="trung-nien">Trung niên</option>
+            <option value="tnglt">Trung niên, già lớn tuổi</option>
+            <option value="lt">Già, lớn tuổi</option>
+        </select>
+    </div>
+    <button class="btn" onclick="tinhbmi()">TÍNH BMI</button>
+    <div class="result" id="result"></div>
+    </div>
+    <script>
+      
+            var height1 = (document.getElementById('height').value);
+            var weight1 = (document.getElementById('weight').value);
+            var resultEl = document.getElementById('result');
+        function calculate(height, weight) {
+
+            if (a === 0) {
+                if (b === 0) {
+                    resultEl.innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    resultEl.innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                var x = -b / a;
+                resultEl.innerHTML = "Nghiệm của phương trình là x = " + x;
+            }
+        }
+    </script>
